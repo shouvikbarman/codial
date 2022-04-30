@@ -1,0 +1,30 @@
+<header>
+    <div id='logo-container'>
+        <a href="/">
+            <img src= '<%= assetPath("images/logo.png") %> '>
+        </a>
+    </div>
+
+    <span id="name">CODIAL</span>
+
+    <div id='user_details-container'>
+        <% if(locals.user) {%>
+            <p>
+                <a href="/users/profile/<%= user.id %>"><%= user.name %> </a>
+            </p>
+            <p>
+                <a href="/users/sign-out">sign out</a>
+            </p>
+            
+        <% } else {%>
+            <p>
+                <a href="/users/signin">sign in</a>
+            </p>
+            <p>
+                <a href="/users/signup">sign up</a>
+            </p>
+        <% } %> 
+    </div>
+    
+</header>
+

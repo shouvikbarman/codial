@@ -1,0 +1,23 @@
+<li id='comment-<%= comment._id %>'>
+    <% if(locals.user && locals.user.id == comment.user._id){ %>
+        <a id='button-<%= comment._id %>' class="delete-button" href='/comments/destroy/<%= comment._id %> '>X</a> 
+    <% } %>
+    <a href="/users/profile/<%= comment.user.id %>">
+        <small><%= comment.user.name %> </small>
+    </a>  
+    
+    <p><%= comment.content %></p>
+
+    <small>
+        <% if(locals.user){ %>
+            <a class='toggle-like-button' likes-count=<%= comment.likes.length %> href='likes/toggle/?id=<%=comment._id%>&type=Comment'>
+                <img src= '<%= assetPath("images/like1.png") %>'
+                    class="<%= locals.user.likes.comments.includes(comment._id) ? 'likeButtonBlue' : 'likeButtonWhite' %>">
+                <%= comment.likes.length %> Likes 
+            </a>
+        <% } else { %>
+            <%= comment.likes.length %> likes
+        <% } %>
+    </small>
+    
+</li>

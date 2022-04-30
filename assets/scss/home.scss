@@ -1,0 +1,90 @@
+
+#post-container{
+    display: flex;
+    flex:4;
+    flex-direction: column;
+    align-items: center;
+    border-right: solid rgba(128, 128, 128, 0.486);
+}
+
+#user-friends {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#posts-list-container {
+    ul{
+        padding: 0;
+    }
+
+    li{
+        display: flex;
+        min-width: 300px;
+        flex-direction: column;
+        list-style: none;
+        background-color: rgba(128, 128, 128, 0.363);
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+
+    #user-name-container{
+        display: flex;
+    }
+
+    .post-comments {
+        margin-top: 10px;
+    }
+    
+    .input {
+        height: 30px;
+        border: none;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .toggle-like-button{
+        text-decoration: none;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    } 
+    
+    
+
+}
+
+.button {
+    background-color: teal;
+    color: white;
+    height: 30px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button{
+    color: black;
+    align-self: flex-end;
+    font-size: 13px;
+    
+}
+
+.likeButtonWhite{
+    background-color: white;
+}
+
+.likeButtonBlue{
+    background-color: blue;
+}
+
+
+

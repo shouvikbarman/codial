@@ -1,0 +1,17 @@
+<div id="form-container">
+
+    <link rel="stylesheet" href= '<%= assetPath("css/signin-signup.css") %>'>
+
+    <form action="/users/create" method="post">
+        <input type="text" name="name" placeholder="your name" required class="input">
+        <input type="email" name="email" placeholder="your email" required class="input">
+        <input type="password" name="password" placeholder="your password" required class="input">
+        <input type="password" name="confirm_password" placeholder="confirm password" required class="input">
+        <input type="submit" name="Sign up" class="button">
+    </form>
+
+    <a href="/users/auth/google">
+        <img src= '<%= assetPath("images/google.png">) %>'
+    </a>
+
+</div>

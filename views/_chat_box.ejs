@@ -1,0 +1,32 @@
+<link rel="stylesheet" href='<%= assetPath("css/chat-box.css") %> '>
+
+<% if(locals.user){ %>
+
+    <div id="chat-logo">
+        <img src= '<%= assetPath("images/chat.png") %> '>
+    </div>
+    <div id="chat-box-container"> 
+
+        <span id="cross-button">X</span>
+
+        <div id="message-container">
+            <ul id="message-list">
+                <li class="other-message">
+                    <span>Message</span>
+                </li>
+
+                <li class="self-message">
+                    <span>Self Message</span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="input-container">
+
+            <input type="text" id="message-input" placeholder="Type here...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+<% } %> 
+
+<script src='<%= assetPath("script/chat_modal.js") %> '></script>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            <%= title %> 
+        </title>
+        <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+			  
+		
+        <link rel="stylesheet" href= '<%= assetPath("css/layout.css") %>' >
+        <%- style %> 
+    </head>
+
+    <body>
+        <%- include('_header'); %> 
+
+        <div id="content-container">
+            <%- body %>
+        </div>
+
+        <% if(!locals.user){ %> 
+        
+            <%- include('_footer'); %>
+        <% } %> 
+        <script>
+            <% if (flash.success && flash.success.length > 0) { %>
+                    new Noty({
+                    theme: 'relax',
+                    text: '<%= flash.success %>',
+                    type: 'success',
+                    layout: 'topRight',
+                    timeout: 1500
+                    
+                }).show();
+            <% } else if (flash.error && flash.error.length > 0) {%>
+                new Noty({
+                    theme: 'relax',
+                    text: '<%= flash.error %>',
+                    type: 'error',
+                    layout: 'topRight',
+                    timeout: 1500
+                    
+                }).show();
+            <% } %>
+        </script>
+        <%- script %> 
+    </body>
+</html>

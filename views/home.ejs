@@ -1,0 +1,65 @@
+<link rel="stylesheet" href='<%= assetPath("css/home.css") %>'>
+<% if(locals.user){ %>
+
+<div id="post-container">
+    <section id='feed-posts'>
+        <h4>Post</h4>
+        <form action='/posts/create' id='new-post-form' method='post'>
+            <textarea name="content" cols="30" rows="5" placeholder="Type here..."></textarea>
+            <input type='submit' value='post' class="button">
+        </form>
+    </section>
+    <% } %>   
+    <div id='posts-list-container' likeImgPath= '<%= assetPath("images/like.png") %>' likeImgPath1= '<%= assetPath("images/like1.png") %>'>
+        <ul>
+            <% for(post of posts ){ %>
+                <%- include('_post')  -%> 
+            <% } %>  
+            
+        </ul>
+    </div>
+</div>
+
+<section id='user-friends'>
+    <% if(locals.user){ %> 
+        <h4>Friends</h4>
+        <% for(u of all_users) { %>
+            <p>
+                <a href='/users/profile/<%= u.id %> '><%= u.name %></a>
+            </p>    
+        <% } %> 
+    <% } %> 
+    
+    <%- include('_chat_box') %> 
+</section> 
+
+<script type='module' src="<%= assetPath('script/home_post.js') %>"></script>
+<script src="<%= assetPath('script/toggle_likes.js') %>"></script>
+<script src="<%= assetPath('script/home_comment.js') %>"></script>
+<script src="<%= assetPath('script/delete.js') %>"></script>
+<script src='<%= assetPath("script/chat_engine.js") %>'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" 
+    integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+</script>
+
+<script>
+    $('.toggle-like-button').each(function(){
+       new ToggleLike(this);
+    });
+
+    $('.addComment').each(function(){
+       new CommentForm(this);
+    });
+    
+    $('.delete-button').each(function(){
+        new DeleteItem(this);
+    });
+</script>
+
+<% if(locals.user){ %>
+    <script>
+        new ChatEngine('chat-box-container','<%= locals.user.email %>');
+    </script> 
+<% } %> 

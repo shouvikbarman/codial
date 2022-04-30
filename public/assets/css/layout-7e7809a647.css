@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: blue;
+  justify-content: space-between;
+}
+
+header #name {
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  align-self: center;
+  font-family: cursive;
+}
+
+header #logo-container {
+  height: 100%;
+  width: auto;
+  cursor: pointer;
+}
+
+header #logo-container img {
+  height: 100%;
+  width: 100%;
+}
+
+header #user_details-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+header #user_details-container p {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+header #user_details-container a {
+  color: white;
+}
+
+#content-container {
+  display: flex;
+  min-height: calc(100vh - 80px);
+  justify-content: center;
+  margin: 0;
+  padding: 50px 0 0 30px;
+  width: 94vw;
+  position: relative;
+}
+
+footer {
+  width: 100%;
+  background-color: blue;
+}
