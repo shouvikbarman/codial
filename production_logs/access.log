@@ -75,3 +75,47 @@ production
 production
 production
 production
+[0mGET / [32m200[0m 1754.164 ms - 3584[0m
+[0mGET /favicon.ico [33m404[0m 213.027 ms - 150[0m
+[0mGET /users/signin [32m200[0m 5.010 ms - 1752[0m
+[0mGET /users/auth/google [36m302[0m 18.866 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0AX4XfWgOfdQ4FnxF_QB7Hj6h8woVazlDEEiNUwkdd2CJtBRprp_qMynDpNTMpRwp5m2ztw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent [36m302[0m 967.368 ms - 46[0m
+[0mGET / [32m200[0m 67.647 ms - 6593[0m
+[0mGET /likes/toggle/?id=6240a1faf48859e0bf1d5cc4&type=Post [32m200[0m 163.518 ms - 58[0m
+[0mGET /likes/toggle/?id=6240a1faf48859e0bf1d5cc4&type=Post [32m200[0m 182.777 ms - 57[0m
+[0mGET /likes/toggle/?id=6240a1f5f48859e0bf1d5cc1&type=Post [32m200[0m 11.733 ms - 58[0m
+[0mGET /likes/toggle/?id=6240a1f5f48859e0bf1d5cc1&type=Post [32m200[0m 10.347 ms - 57[0m
+[0mPOST /comments/create [32m200[0m 237.052 ms - 410[0m
+[0mGET /comments/destroy/626ed43f163a91de9e77033f [32m200[0m 28.880 ms - 108[0m
+[0mGET / [32m200[0m 15.910 ms - 6293[0m
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production
+production

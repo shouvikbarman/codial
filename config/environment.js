@@ -53,7 +53,7 @@ const production = {
     },
     google_clientID: process.env.google_clientID,
     google_clientSecret: process.env.google_clientSecret,
-    google_callbackURL:'http://localhost:8000/users/auth/google/callback',
+    google_callbackURL:`http://3.108.220.180:8000/users/auth/google/callback`,
     jwt_secretOrKey: process.env.jwt_secretOrKey,
     morgan:{
         mode:'production',
