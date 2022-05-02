@@ -1,9 +1,0 @@
-[0mGET / [32m200[0m 4115.000 ms - 3511[0m
-[0mGET /favicon.ico [33m404[0m 2403.687 ms - 150[0m
-[0mGET / [36m304[0m 1573.113 ms - -[0m
-[0mGET /favicon.ico [33m404[0m 245.916 ms - 150[0m
-[0mGET / [36m304[0m 32.922 ms - -[0m
-[0mGET /users/signin [36m304[0m 8.091 ms - -[0m
-[0mGET /users/auth/google [36m302[0m 5.682 ms - 0[0m
-[0mGET /users/auth/google/callback?code=4%2F0AX4XfWgcNRAZgJ_cu0EVLj2oqSfF7_EtfdD3cF8ku-0Ui0dAYTH5xhoXP3c1DsDdF--rhQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent [36m302[0m 475.023 ms - 46[0m
-[0mGET / [32m200[0m 30.027 ms - 6516[0m

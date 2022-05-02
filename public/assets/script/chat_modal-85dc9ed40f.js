@@ -1,1 +1,0 @@
-const chatLogo=$("#chat-logo"),chatBox=$("#chat-box-container"),crossButton=$("#cross-button");chatLogo.click((function(){chatLogo.css("display","none"),chatBox.css("display","block")})),crossButton.click((function(){chatLogo.css("display","block"),chatBox.css("display","none")}));
